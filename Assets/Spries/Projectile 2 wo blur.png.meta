@@ -136,12 +136,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pheonix
+      name: Pheonix_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 47
+        width: 43
         height: 48
       alignment: 3
       pivot: {x: 1, y: 1}
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_1
+      name: Phoenix_2
       rect:
         serializedVersion: 2
         x: 43
@@ -166,7 +166,7 @@ TextureImporter:
         height: 48
       alignment: 3
       pivot: {x: 1, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -178,12 +178,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_2
+      name: Phoenix_3
       rect:
         serializedVersion: 2
-        x: 92
+        x: 91
         y: 0
-        width: 47
+        width: 46
         height: 48
       alignment: 3
       pivot: {x: 1, y: 1}
@@ -199,10 +199,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_3
+      name: Phoenix_4
       rect:
         serializedVersion: 2
-        x: 139
+        x: 138
         y: 0
         width: 47
         height: 48
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_4
+      name: Phoenix_5
       rect:
         serializedVersion: 2
         x: 186
@@ -241,7 +241,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_5
+      name: Phoenix_6
       rect:
         serializedVersion: 2
         x: 236
@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_6
+      name: Phoenix_7
       rect:
         serializedVersion: 2
         x: 284
@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_7
+      name: Phoenix_
       rect:
         serializedVersion: 2
         x: 331
@@ -304,7 +304,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectile 2 wo blur_8
+      name: Phoenix_8
       rect:
         serializedVersion: 2
         x: 380
@@ -335,15 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pheonix: -539745813
-      Projectile 2 wo blur_1: 1913532874
-      Projectile 2 wo blur_2: -2067927788
-      Projectile 2 wo blur_3: -2100416537
-      Projectile 2 wo blur_4: -639080605
-      Projectile 2 wo blur_5: 1136886434
-      Projectile 2 wo blur_6: -770172932
-      Projectile 2 wo blur_7: -467127084
-      Projectile 2 wo blur_8: 531177975
+      Pheonix_1: -539745813
+      Phoenix_: -467127084
+      Phoenix_2: 1913532874
+      Phoenix_3: -2067927788
+      Phoenix_4: -2100416537
+      Phoenix_5: -639080605
+      Phoenix_6: 1136886434
+      Phoenix_7: -770172932
+      Phoenix_8: 531177975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

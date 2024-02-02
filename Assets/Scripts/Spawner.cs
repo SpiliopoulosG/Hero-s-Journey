@@ -15,7 +15,8 @@ public class Spawner : MonoBehaviour
     {
         if (timeBtwSpawn <= 0) {
             int rand = Random.Range(0, obstaclePatterns.Length);
-            Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
+            GameObject enemySpawner = Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
+            Destroy(enemySpawner, timeBtwSpawn + 1f);
             timeBtwSpawn = startTimeBtwSpawn + 0.25f;
             if (startTimeBtwSpawn > minTime) {
                 startTimeBtwSpawn -= decreaseTime;

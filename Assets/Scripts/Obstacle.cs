@@ -6,10 +6,13 @@ public class Obstacle : MonoBehaviour
 {
     public int damage = 1;
     public float speed;
+    public float acceleration = 0.05f;
     public GameObject effect;
 
     private void Update() {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        float maxIncreasedSpeed = 2 * speed;
+        float currentSpeed = (maxIncreasedSpeed < speed + acceleration * Time.deltaTime) ? speed + acceleration * Time.deltaTime : maxIncreasedSpeed;
+        transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
 
         if (transform.position.x < -15f) {
             Destroy(gameObject);
@@ -17,9 +20,13 @@ public class Obstacle : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Instantiate(effect, transform.position, Quaternion.identity);
+        startEffect();
         other.GetComponent<Player>().health -= damage;
-        Debug.Log("Player Hit");
         Destroy(gameObject);
+    }
+
+    void startEffect() {
+        GameObject thunderParticle = Instantiate(effect, transform.position, Quaternion.identity);
+        Destroy(thunderParticle, 3f);
     }
 }

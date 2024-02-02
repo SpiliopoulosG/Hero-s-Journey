@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     {
 
         if ( health <= 0 ) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Game");
         }
 
         if ( Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) {
@@ -31,28 +31,31 @@ public class Player : MonoBehaviour
             endTouchPosition = Input.GetTouch(0).position;
 
             if (endTouchPosition.y < startTouchPosition.y) {
-                Instantiate(effect, transform.position, Quaternion.identity);
                 if (!(transform.position.y - ChangeLaneForce < -2f)) {
                     transform.position = new Vector3(transform.position.x, transform.position.y - ChangeLaneForce, transform.position.z);
                 }
             }
 
             if (endTouchPosition.y > startTouchPosition.y) {
-                Instantiate(effect, transform.position, Quaternion.identity);
                 if (!(transform.position.y + ChangeLaneForce > 4f)) {
                     transform.position = new Vector3(transform.position.x, transform.position.y + ChangeLaneForce, transform.position.z);
                 }
             }
 
+            startEffect();
             PlayChangeLaneSound();
         }
     }
 
     void PlayChangeLaneSound()
     {
-        if (audioSource)
-        {
+        if (audioSource) {
             audioSource.PlayOneShot(clip, volume);
         }
+    }
+
+    void startEffect() {
+        GameObject thundersParticle = Instantiate(effect, transform.position, Quaternion.identity);
+        Destroy(thundersParticle, 3f);
     }
 }
